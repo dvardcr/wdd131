@@ -6,25 +6,30 @@
 body {
     display: grid;
     height: 100vh;
-    grid-template: 0.5fr auto 1fr 0.5fr / 1fr 1fr 1fr;
+    grid-template: 0.5fr 1fr 0.5fr / 1fr 1fr 1fr;
 }
 
 header {
     background: #333333;
     color: white;
     padding: 1rem;
+    position: relative;
     grid-column: 1 / 4;
 }
 
 /* Navigation styled with Flexbox */
 
 .navigation {
-    grid-column: 1 / -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     list-style: none;
     display: flex;
     background-color: #000000;
     align-items: center;
     padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 nav a {
