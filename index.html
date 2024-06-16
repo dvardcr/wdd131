@@ -13,13 +13,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c45effa954.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <header>
-        <h1>WDD 131 - Dynamic Web Fundamentals - Diego Vargas</h1>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span>Diego Vargas</span></h1>
         <nav class="navigation">
             <ul>
                 <li><a href="https://www.linkedin.com/in/diegovargasdiaz" target="_blank">LinkedIn</a></li>
@@ -30,18 +32,19 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="card" id="card-1">
             <h2>About Me</h2>
-            <p>My name is Diego Vargas. I was born in Costa Rica and now live with my family in the capital city, San
+            <img src="images/profile.jpg" alt="Personal Picture" class="right_img">
+            <p class="intro">My name is Diego Vargas. I was born in Costa Rica and now live with my family in the
+                capital city, San
                 Jose. I am currently working as a Project Manager at a tech company but aspire to transition into a
                 career in software development. My number one priority in life is my wife and my sons. I love spending
                 time with my family, watching movies, and playing video games.</p>
-            <img src="images/personal_pic.jpg" alt="My picture" class="right_img">
-            <h2>San Jose, Costa Rica</h2>
-            <img src="images/costa_rica_flag.jpg" alt="Official Flag of Costa Rica" class="left_img">
-            <p>Costa Rica, located in Central America, boasts remarkable biodiversity, with around 5% of the planet's
+            <h3>San Jose, Costa Rica</h3>
+            <img src="images/flag.jpg" alt="Costa Rica Official Flag" class="left_img">
+            <p class="country">Costa Rica, located in Central America, boasts remarkable biodiversity, with around 5% of
+                the planet's
                 species within its borders. Renowned for its commitment to peace, our country abolished its military in
                 1948, redirecting resources towards education, healthcare, and conservation. Furthermore, Costa Rica
                 leads in sustainability, with almost all its electricity sourced from renewable energy, making it a
@@ -55,13 +58,15 @@
                 <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
                 <li><a href="https://byui-cse.github.io/wdd131-ww-course/resources/frontend-resources.html"
                         target="_blank">Fundamentals</a></li>
-
+                <li><a href="https://codepen.io/">Code Pen</a></li>
             </ul>
         </section>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span>
+            <i class="fas fa-sun"></i>
             Diego Vargas
+            <i class="fas fa-sun"></i>
             Costa Rica
         </p>
         <p id="lastModified"></p>
