@@ -10,9 +10,9 @@ body {
 
 header {
     background-color: #3c0a64;
-    display: grid;
-    grid-gap: 1rem;
     padding: 20px;
+    display: grid;
+	grid-gap: 1rem;
 }
 
 header,
@@ -54,23 +54,16 @@ ul {
 }
 
 nav {
-    background-color: #12669e;
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column
 }
 
 .navigation {
-    display: none;
-    /* Hide the navigation by default */
+    display: flex;
     flex-direction: column;
     list-style: none;
     background-color: #3c0a64;
     color: white;
-}
-
-.navigation.open {
-    display: flex;
-    /* Show navigation when open */
 }
 
 .navigation a {
@@ -81,15 +74,14 @@ nav {
     color: white;
 }
 
-.navigation.open a {
-    display: block;
-    /* Show links when navigation is open */
-}
-
 .navigation a:hover {
     background-color: white;
     color: #3c0a64;
     font-weight: 700;
+}
+
+.open a {
+    display: block;
 }
 
 h2 {
@@ -101,9 +93,10 @@ h2 {
 
 main {
     display: grid;
-    gap: 10px;
+    gap: 16px;
     padding: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    max-width: 1200px;
+    margin-bottom: 2rem;
 }
 
 figure {
