@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Diego Vargas">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals by Diego Vargas. This assignment showcases the application of HTML, CSS, and JavaScript in designing and developing a responsive image source.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="https://kit.fontawesome.com/c45effa954.js" crossorigin="anonymous"></script>
+    <title>Costa Rica</title>
+</head>
+
+<body>
+    <header>
+        <h1>Costa Rica</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/frog_large.webp">
+                <img src="images/frog_small.webp" alt="Red-eyed tree frog" style="width: 1000px;">
+            </picture>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span>
+            <i class="fas fa-sun"></i>
+            Diego Vargas
+            <i class="fas fa-sun"></i>
+            Costa Rica
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
