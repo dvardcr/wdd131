@@ -13,7 +13,7 @@ body {
 h1 {
     text-align: center;
     font-weight: 700;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 h2 {
@@ -22,13 +22,13 @@ h2 {
     padding: 1rem;
 }
 
+header,
+main {
+    margin: 0 auto;
+}
+
 header {
     grid-row: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     color: white;
     background-color: #01222e;
     border-bottom: 20px solid red;
@@ -49,11 +49,12 @@ main {
     margin: 0;
 }
 
-picture {
+picture img {
     margin: 0;
     padding-bottom: 5px;
     background-color: red;
-    max-width: 600px;
+    max-width: 100%;
+    height: auto;
 }
 
 .data-box {
