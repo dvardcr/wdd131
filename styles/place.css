@@ -53,6 +53,7 @@ picture {
     margin: 0;
     padding-bottom: 5px;
     background-color: red;
+    max-width: 600px;
 }
 
 .data-box {
@@ -108,6 +109,9 @@ footer p {
     margin-bottom: 5px;
 }
 
+
+
+/*SVG Colors*/
 .cls-1 {
     fill: #f8b62d;
 }
