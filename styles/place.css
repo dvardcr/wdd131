@@ -4,32 +4,35 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-family: "Roboto", sans-serif;
+    --font-color-01: white;
+    margin: 0 auto;
+}
+
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 400;
     font-style: normal;
 }
 
 h1 {
+    font-family: var(--font-family);
     text-align: center;
     font-weight: 700;
     padding: 2rem;
 }
 
 h2 {
+    font-family: var(--font-family);
     text-align: center;
     font-weight: 700;
     padding: 1rem;
 }
 
-header,
-main {
-    margin: 0 auto;
-}
-
 header {
     grid-row: 1;
-    color: white;
+    color: var(--font-color-01);
     background-color: #01222e;
     border-bottom: 20px solid red;
 }
@@ -54,7 +57,6 @@ picture img {
     padding-bottom: 5px;
     background-color: red;
     max-width: 100%;
-    height: auto;
 }
 
 .data-box {
@@ -102,7 +104,7 @@ footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 15px;
-    color: white;
+    color: var(--font-color-01);
     background-color: #01222e;
 }
 
