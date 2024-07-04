@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    min-height: 100vh;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -94,7 +99,7 @@ h3 {
 }
 
 main {
-    display: grid;
+    flex: 1;
     gap: 16px;
     padding: 16px;
     max-width: 1200px;
@@ -123,6 +128,7 @@ section p {
 }
 
 img {
+    margin-top: 1rem;
     width: 100%;
     height: auto;
     display: block;
@@ -133,8 +139,6 @@ img {
 main div {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -153,10 +157,11 @@ footer {
     background-color: #3c0a64;
     color: white;
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     font-size: 15px;
     height: auto;
+    margin-top: auto;
 }
 
 footer p {
