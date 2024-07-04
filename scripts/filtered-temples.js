@@ -1,14 +1,13 @@
+// Footer JS
 const year = document.querySelector("#currentyear");
 const today = new Date();
 year.textContent = `${today.getFullYear()}`;
 
 const lastModifiedElement = document.querySelector("#lastModified");
 lastModifiedElement.textContent = "Last Modification: " + document.lastModified;
-lastModifiedElement.style.color = "gold";
-lastModifiedElement.style.fontSize = "0.75em";
+lastModifiedElement.classList.add('last-modified');
 
-
-/* Hamburguer Menu */
+// Hamburger Menu
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
@@ -17,7 +16,7 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
-// Header 2 Menu Link
+// H2 Menu Link
 document.addEventListener('DOMContentLoaded', function() {
     const dynamicHeader = document.getElementById('dynamicHeader');
     const defaultHeaderText = 'Home';
@@ -162,6 +161,10 @@ function createTempleCard(filteredTemples) {
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
         img.setAttribute("loading", "lazy");
+
+        // Ensure image dimensions are defined
+        img.style.width = '100%';
+        img.style.height = 'auto';
 
         card.appendChild(name);
         card.appendChild(location);
