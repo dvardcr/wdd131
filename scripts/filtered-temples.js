@@ -17,24 +17,37 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
-// Header 2 - Menu Link
+// Header 2 Menu Link
+
 document.addEventListener('DOMContentLoaded', function() {
     const dynamicHeader = document.getElementById('dynamicHeader');
-
     const defaultHeaderText = 'Home';
-    
-    if (dynamicHeader.textContent.trim() === '') {
+
+    // Check localStorage for saved header text
+    const savedHeaderText = localStorage.getItem('dynamicHeaderText');
+
+    if (savedHeaderText) {
+        dynamicHeader.textContent = savedHeaderText;
+    } else {
         dynamicHeader.textContent = defaultHeaderText;
     }
 
-    const menuItems = document.querySelectorAll('.navigation ul li');
+    const menuItems = document.querySelectorAll('.navigation ul li a');
 
     function handleMenuItemClick(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default navigation for now
 
         const menuItemText = event.target.textContent.trim();
-
         dynamicHeader.textContent = menuItemText;
+
+        // Save the header text in localStorage
+        localStorage.setItem('dynamicHeaderText', menuItemText);
+
+        // Navigate to the link after a short delay
+        const href = event.target.getAttribute('href');
+        setTimeout(() => {
+            window.location.href = href;
+        }, 100); // Adjust the delay as needed
     }
 
     menuItems.forEach(item => {
@@ -102,43 +115,43 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
+    templeName: "Salt Lake",
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1893, April, 6",
+    area: 382207,dynami
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/400x250/slctemple7.jpg"
     },
     {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
+    templeName: "Rome Italy",
+    location: "Rome, Italy",
+    dedicated: "2019, March, 12",
+    area: 41010,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/4-Rome-Temple-2160935.jpg"
     },
     {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
+    templeName: "Sapporo Japan",
+    location: "Sapporo, Japan",
+    dedicated: "2016, August, 21",
+    area: 48480,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sapporo-japan/400x250/sapporo-japan-exterior-night-1945721.jpg"
     },
     {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
+    templeName: "San Juan Puerto Rico",
+    location: "San Juan, Puerto Rico",
+    dedicated: "2023, January, 15",
+    area: 6988,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-juan-puerto-rico/400x250/san_juan_puerto_rico_temple_exterior.jpeg"
     },
     {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
+    templeName: "San Jose Costa Rica",
+    location: "Heredia, Costa Rica",
+    dedicated: "2000, June, 4",
+    area: 10700,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-jose-costa-rica/400x250/san-jose-costa-rica-temple-lds-83515-wallpaper.jpg"
     },
 ];

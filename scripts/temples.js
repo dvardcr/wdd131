@@ -20,21 +20,33 @@ hamButton.addEventListener('click', () => {
 // Header 2 - Menu Link
 document.addEventListener('DOMContentLoaded', function() {
     const dynamicHeader = document.getElementById('dynamicHeader');
-
     const defaultHeaderText = 'Home';
-    
-    if (dynamicHeader.textContent.trim() === '') {
+
+    // Check localStorage for saved header text
+    const savedHeaderText = localStorage.getItem('dynamicHeaderText');
+
+    if (savedHeaderText) {
+        dynamicHeader.textContent = savedHeaderText;
+    } else {
         dynamicHeader.textContent = defaultHeaderText;
     }
 
-    const menuItems = document.querySelectorAll('.navigation ul li');
+    const menuItems = document.querySelectorAll('.navigation ul li a');
 
     function handleMenuItemClick(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default navigation for now
 
         const menuItemText = event.target.textContent.trim();
-
         dynamicHeader.textContent = menuItemText;
+
+        // Save the header text in localStorage
+        localStorage.setItem('dynamicHeaderText', menuItemText);
+
+        // Navigate to the link after a short delay
+        const href = event.target.getAttribute('href');
+        setTimeout(() => {
+            window.location.href = href;
+        }, 100); // Adjust the delay as needed
     }
 
     menuItems.forEach(item => {
