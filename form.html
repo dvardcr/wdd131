@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Diego Vargas">
     <meta name="description"
-        content="WDD 131 - Dynamic Web Fundamentals by Diego Vargas. This assignment showcases the application of HTML, CSS, and JavaScript in designing and developing a product review form page using good form design given specific field requirements and submission confirmation with a counter. Ensure that the form is user friendly on both mobile and desktop screens.">
+        content="WDD 131 - Dynamic Web Fundamentals by Diego Vargas. This assignment showcases the application of HTML, CSS, and JavaScript in designing and developing a product review form page using good form design given specific field requirements and submission confirmation with a counter.">
 
-    <title>WDD 131 - Dynamic Web Fundamentals - Diego Vargas</title>
+    <title>Product Review | Diego Vargas | WDD 131 - Dynamic Web Fundamentals </title>
 
     <script src="scripts/form.js" defer></script>
     <link rel="stylesheet" href="styles/form-large.css">
@@ -21,6 +21,73 @@
         <h1>Product Review</h1>
     </header>
     <main>
+        <form method="get" action="review.html" class="wf1">
+            <fieldset>
+                <legend>Product Name</legend>
+                <select id="productSelect" name="product" required>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label for="onestar">
+                    &#9733;<input type="radio" id="onestar" name="stars" value="1" required>
+                </label>
+                <label for="twostar">
+                    &#9733;&#9733;<input type="radio" id="twostar" name="stars" value="2" required>
+                </label>
+                <label for="threestar">
+                    &#9733;&#9733;&#9733;<input type="radio" id="threestar" name="stars" value="3" required>
+                </label>
+                <label for="fourstar">
+                    &#9733;&#9733;&#9733;&#9733;<input type="radio" id="fourstar" name="stars" value="4" required>
+                </label>
+                <label for="fivestar">
+                    &#9733;&#9733;&#9733;&#9733;&#9733;<input type="radio" id="fivestar" name="stars" value="5"
+                        required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Date of Installation</legend>
+                <input type="date" id="installationDate" name="dateOfInstall" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Useful Features</legend>
+                <div>Which features did you find useful in the product?</div>
+                <p>(Check all that apply)</p>
+                <label for="durability">
+                    <input type="checkbox" id="durability" name="usefulFeatures[]" value="durability"> Durability
+                </label>
+                <label for="easeOfUse">
+                    <input type="checkbox" id="easeOfUse" name="usefulFeatures[]" value="easeOfUse"> Ease of Use
+                </label>
+                <label for="performance">
+                    <input type="checkbox" id="performance" name="usefulFeatures[]" value="performance"> Performance
+                </label>
+                <label for="design">
+                    <input type="checkbox" id="design" name="usefulFeatures[]" value="design"> Design
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Written Review</legend>
+                <p>(Optional)</p>
+                <textarea id="writtenReview" name="userReview"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Name</legend>
+                <p>(Optional)</p>
+                <label for="fullName">
+                    <input type="text" id="fullName" name="userName">
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span>
