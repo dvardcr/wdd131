@@ -4,10 +4,72 @@
     box-sizing: border-box;
 }
 
+/* Header */
+header {
+    background-color: #2d032b;
+    padding: .5rem 2%;
+    text-align: center;
+}
 
+header h1 {
+    margin: 0;
+    color: #fff;
+}
 
+/* Body */
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+/* Main */
+main {
+    padding: 1rem 0;
+}
+
+/* Form */
+
+.wf1 {
+    padding: 1rem 0;
+    background-color: #d5cdd5;
+}
+
+.wf1 fieldset {
+    border: none;
+}
+
+.wf1 legend {
+    color: black;
+    padding: 0 .5rem;
+    font-weight: bold;
+}
+
+.wf1 label {
+    display: block;
+    padding: .5rem;
+    color: black;
+    font-size: .9rem;
+}
+
+.wf1 input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+[name="stars"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
 
 /* Footer */
+
+footer {
+    background-color: #2d032b;
+    color: #fff;
+    padding: .5rem 2%;
+    text-align: center;
+}
 
 .last-modified {
     color: gold;
