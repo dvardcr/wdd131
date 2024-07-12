@@ -40,14 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const selectElement = document.getElementById('productSelect');
 
-    // Create and append the placeholder option
-    const placeholderOption = document.createElement('option');
-    placeholderOption.value = "";
-    placeholderOption.disabled = true;
-    placeholderOption.selected = true;
-    placeholderOption.textContent = "Select a Product...";
-    selectElement.appendChild(placeholderOption);
-
     // Create and append product options
     products.forEach(product => {
     const option = document.createElement('option');
@@ -74,9 +66,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Save the new review count in localStorage
     localStorage.setItem('reviewCount', reviewCount);
-
-    // Display the review count
-    const reviewCountElement = document.createElement('p');
-    reviewCountElement.textContent = `Total Reviews Completed: ${reviewCount}`;
-    document.querySelector('main').appendChild(reviewCountElement);
 });
