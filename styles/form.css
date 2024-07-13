@@ -42,6 +42,7 @@ main {
 }
 
 .wf1 legend {
+    display: block;
     color: black;
     padding: 0 .5rem;
     font-weight: bold;
@@ -49,9 +50,10 @@ main {
 
 .wf1 label {
     display: block;
-    padding-top: .5rem;
     color: black;
+    padding: 0 .5rem;
     font-size: .9rem;
+    font-weight: bold;
 }
 
 textarea,
@@ -92,6 +94,10 @@ input[type="text"] {
 .wf1 input[type="radio"] {
     margin-right: 6px;
     margin-left: 0.5rem;
+}
+
+.features label {
+    font-weight: 400;
 }
 
 .wf1 input[type="checkbox"] {
