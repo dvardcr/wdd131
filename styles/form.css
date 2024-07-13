@@ -9,6 +9,7 @@ header {
     background-color: #2d032b;
     padding: .5rem 2%;
     text-align: center;
+    font-weight: 700;
 }
 
 header h1 {
@@ -18,8 +19,9 @@ header h1 {
 
 /* Body */
 body {
-    font-size: 16px;
-    font-family: Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Main */
@@ -36,6 +38,7 @@ main {
 
 .wf1 fieldset {
     border: none;
+    margin: 2rem 0;
 }
 
 .wf1 legend {
@@ -46,20 +49,75 @@ main {
 
 .wf1 label {
     display: block;
-    padding: .5rem;
+    padding-top: .5rem;
     color: black;
     font-size: .9rem;
 }
 
-.wf1 input[type="checkbox"] {
-    margin-right: 6px;
+.wf1 div {
+    padding: 0 .5rem;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-[name="stars"] {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5px;
+.written p,
+.name p {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 12px;
+    color: blue;
+}
+
+.wf1 input[type="text"],
+.wf1 input[type="date"],
+.wf1 select {
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+    margin-left: .5rem;
+}
+
+.wf1 input[type="radio"] {
+    margin-right: 6px;
+    margin-left: 0.5rem;
+}
+
+.wf1 input[type="checkbox"] {
+    margin-right: 6px;
+    margin-left: 0.5rem;
+}
+
+.wf1 textarea {
+    margin-left: .5rem;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    min-height: 100px;
+}
+
+.wf1 input[type="submit"] {
+    border: solid 1px #999;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 100%;
+    max-width: 400px;
+    margin-left: .5rem;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wf1 input[type="submit"]:hover {
+    background-color: #2d032b;
+    color: white;
 }
 
 /* Footer */
