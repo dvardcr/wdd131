@@ -73,7 +73,7 @@ input[type="text"] {
 }
 
 .optional {
-    color: #293290;
+    color: #2d032b;
     font-size: small;
 }
 
@@ -94,19 +94,28 @@ input[type="text"] {
 .wf1 input[type="radio"] {
     margin-right: 6px;
     margin-left: 0.5rem;
+    width: 24px;
+    height: 24px;
 }
 
 .features label {
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .wf1 input[type="checkbox"] {
-    margin-right: 6px;
+    margin-right: 8px;
     margin-left: 0.5rem;
+    width: 24px;
+    height: 24px;
 }
 
 .wf1 textarea {
-    margin-left: .5rem;
     width: 100%;
     max-width: 450px;
     height: 100%;
