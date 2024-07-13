@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create and append the label element
     const labelElement = document.createElement('label');
     labelElement.htmlFor = 'productSelect';
-    /*labelElement.textContent = 'Choose a Product:';*/
     selectElement.parentElement.insertBefore(labelElement, selectElement);
 
     // Create and append product options
