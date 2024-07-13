@@ -1,0 +1,150 @@
+:root {
+    /* Global Color Variables */
+    --background-header-color: #FFFFFF;
+    --text-color: #000000;
+    --primary-color: #5B280E;
+    --secondary-color: #FFBB3D;
+
+    /* Font Families */
+    --font-primary: 'Roboto', sans-serif;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Font Styles */
+    --font-style-normal: normal;
+    --font-style-italic: italic;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-header-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--background-header-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Bar Styles */
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    color: var(--background-header-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+/* Site Plan Section Styles */
+.site-plan {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.site-title {
+    font-weight: var(--font-weight-bold);
+}
+
+.site-plan h2 {
+    color: var(--primary-color);
+}
+
+.site-plan h3 {
+    color: var(--primary-color);
+}
+
+.site-plan .url {
+    color: var(--primary-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-bold);
+    background-color: var(--primary-color);
+}
+
+.background-color {
+    color: var(--background-header-color);
+    background-color: #000000;
+}
+
+.text-color {
+    font-weight: var(--font-weight-bold);
+}
+
+section div p {
+    font-style: var(--font-style-italic);
+}
+
+.typo-title {
+    font-weight: var(--font-weight-bold);
+}
+
+.wireframe-title {
+    font-weight: var(--font-weight-bold);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer #currentyear {
+    font-weight: var(--font-weight-bold);
+}
+
+footer #lastModified {
+    padding-top: 0.1rem;
+    font-size: 0.9rem;
+}
