@@ -61,12 +61,9 @@ main {
     font-weight: bold;
 }
 
-.written p,
-.name p {
-    font-weight: 300;
-    font-style: italic;
-    font-size: 12px;
-    color: blue;
+.optional {
+    color: #293290;
+    font-size: small;
 }
 
 .wf1 input[type="text"],
@@ -79,7 +76,7 @@ main {
     padding: .75rem;
     color: #555;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     margin-left: .5rem;
 }
 
@@ -96,7 +93,7 @@ main {
 .wf1 textarea {
     margin-left: .5rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     height: 100%;
     min-height: 100px;
 }
@@ -107,7 +104,7 @@ main {
     border-radius: 6px;
     padding: .8rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     margin-left: .5rem;
     font-size: medium;
     font-weight: bold;
@@ -118,6 +115,41 @@ main {
 .wf1 input[type="submit"]:hover {
     background-color: #2d032b;
     color: white;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.1rem;
+}
+
+.rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.rating label input[type="radio"] {
+    margin-top: 0.2rem;
+}
+
+.wf1 input:required {
+    border-left: solid 8px red;
+}
+
+.wf1 select:required {
+    border-left: solid 8px red;
+}
+
+.wf1 input:required:valid {
+    border-left: solid 8px green;
+}
+
+.wf1 select:required:valid {
+    border-left: solid 8px green;
 }
 
 /* Footer */

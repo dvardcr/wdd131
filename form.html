@@ -29,14 +29,14 @@
     <main>
         <form method="get" action="review.html" class="wf1">
             <fieldset class="products">
-                <legend>Product Name</legend>
+                <legend>Product Name*</legend>
                 <select id="productSelect" name="product" required>
                     <option value="" disabled selected>Select a Product...</option>
                 </select>
             </fieldset>
 
             <fieldset class="rating">
-                <legend>Overall Rating</legend>
+                <legend>Overall Rating*</legend>
                 <label>&#9733;<input type="radio" id="onestar" name="stars" value="1" required></label>
                 <label>&#9733;&#9733;<input type="radio" id="twostar" name="stars" value="2" required></label>
                 <label>&#9733;&#9733;&#9733;<input type="radio" id="threestar" name="stars" value="3" required></label>
@@ -47,7 +47,7 @@
             </fieldset>
 
             <fieldset class="installation">
-                <legend>Date of Installation</legend>
+                <legend>Date of Installation*</legend>
                 <label><input type="date" id="installationDate" name="dateOfInstall" required></label>
             </fieldset>
 
@@ -63,14 +63,12 @@
             </fieldset>
 
             <fieldset class="written">
-                <legend>Written Review</legend>
-                <p>(Optional)</p>
+                <legend>Written Review <span class="optional">(Optional)</span></legend>
                 <label><textarea id="writtenReview" name="userReview"></textarea></label>
             </fieldset>
 
             <fieldset class="name">
-                <legend>Your Name</legend>
-                <p>(Optional)</p>
+                <legend>Your Name <span class="optional">(Optional)</span></legend>
                 <label><input type="text" id="fullName" name="userName"></label>
             </fieldset>
 
