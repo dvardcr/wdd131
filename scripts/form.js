@@ -39,10 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const selectElement = document.getElementById('productSelect');
-    const productLabel = document.getElementById('productLabel');
-
-    // Create and append the label element
-    productLabel.textContent = 'Select a Product:';
 
     // Create and append product options
     products.forEach(product => {
