@@ -54,6 +54,15 @@ main {
     font-size: .9rem;
 }
 
+textarea,
+input[type="date"],
+input[type="text"] {
+    display: block;
+    padding-top: .5rem;
+    color: black;
+    font-size: .9rem;
+}
+
 .wf1 div {
     padding: 0 .5rem;
     font-style: italic;
