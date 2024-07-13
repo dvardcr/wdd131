@@ -29,10 +29,10 @@
     <main>
         <form method="get" action="review.html" class="wf1">
             <fieldset class="products">
-                <label>Product Name*</label>
-                <select id="productSelect" name="product" required>
-                    <option value="" disabled selected>Select a Product...</option>
-                </select>
+                <label>Product Name*<select id="productSelect" name="product" required>
+                        <option value="" disabled selected>Select a Product...</option>
+                    </select></label>
+
             </fieldset>
 
             <fieldset class="rating">
@@ -47,8 +47,9 @@
             </fieldset>
 
             <fieldset class="installation">
-                <label>Date of Installation*</label>
-                <input type="date" id="installationDate" name="dateOfInstall" required>
+                <label>Date of Installation*<input type="date" id="installationDate" name="dateOfInstall"
+                        required></label>
+
             </fieldset>
 
             <fieldset class="features">
@@ -69,8 +70,9 @@
             </fieldset>
 
             <fieldset class="name">
-                <label>Your Name <span class="optional">(Optional)</span></label>
-                <input type="text" id="fullName" name="userName">
+                <label>Your Name <span class="optional">(Optional)<input type="text" id="fullName"
+                            name="userName"></span></label>
+
             </fieldset>
 
             <input type="submit" value="Post Review">
