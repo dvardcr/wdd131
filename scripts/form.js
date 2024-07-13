@@ -40,6 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const selectElement = document.getElementById('productSelect');
 
+    // Create and append the label element
+    const labelElement = document.createElement('label');
+    labelElement.htmlFor = 'productSelect'; // Set the 'for' attribute to match the ID of the select element
+    labelElement.textContent = 'Choose a Product:';
+    selectElement.parentElement.insertBefore(labelElement, selectElement);
+
     // Create and append product options
     products.forEach(product => {
     const option = document.createElement('option');
