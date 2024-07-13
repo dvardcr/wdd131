@@ -39,18 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const selectElement = document.getElementById('productSelect');
+    const productLabel = document.getElementById('productLabel');
 
     // Create and append the label element
-    const labelElement = document.createElement('label');
-    labelElement.htmlFor = 'productSelect';
-    selectElement.parentElement.insertBefore(labelElement, selectElement);
+    productLabel.textContent = 'Select a Product:';
 
     // Create and append product options
     products.forEach(product => {
-    const option = document.createElement('option');
-    option.value = product.name;
-    option.textContent = `${product.name} (Rating: ${product.avgRating})`;
-    selectElement.appendChild(option);
+        const option = document.createElement('option');
+        option.value = product.name;
+        option.textContent = `${product.name} (Rating: ${product.avgRating})`;
+        selectElement.appendChild(option);
     });
 });
 
