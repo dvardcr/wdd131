@@ -9,7 +9,7 @@
         content="WDD 131 - Dynamic Web Fundamentals by Diego Vargas. This assignment showcases the application of HTML, CSS, and JavaScript in designing and developing a responsive website. The website will highlight international street food through photos, recipes, localization, and cultural background. It will include three main pages featuring different street foods worldwide, their origins, and how to make them at home.">
     <title>Legendary Street Foods</title>
 
-    <script src="scripts/" defer></script>
+    <script src="scripts/form.js" defer></script>
     <link rel="stylesheet" href="styles/">
     <link rel="stylesheet" href="styles/">
 
@@ -26,12 +26,64 @@
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="spots.html">Food Spots</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="form.html">Share Recipe</a></li>
-            </ul>
+            </ul>a
         </nav>
     </header>
     <main>
+        <form method="get" action="confirmation.html" class="wf1">
+            <fieldset>
+                <legend>Share Your Recipe</legend>
+
+                <fieldset class="title-field">
+                    <label for="title">Recipe Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </fieldset>
+
+                <fieldset class="email-field">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+
+                <fieldset class="select-field">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select a Country...</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="textarea-field">
+                    <label for="ingredients">Ingredients:</label>
+                    <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+                </fieldset>
+
+                <fieldset class="time-field">
+                    <label for="preptime">Preparation Time:</label>
+                    <input type="text" id="preptime" name="preptime" required>
+                </fieldset>
+
+                <fieldset class="radio-field">
+                    <label for="difficulty">Difficulty:</label>
+                    <div>
+                        <input type="radio" id="easy" name="difficulty" value="easy" required>
+                        <label for="easy">Easy</label>
+
+                        <input type="radio" id="medium" name="difficulty" value="medium" required>
+                        <label for="medium">Medium</label>
+
+                        <input type="radio" id="hard" name="difficulty" value="hard" required>
+                        <label for="hard">Hard</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="date-field">
+                    <label for="recipeDate">Date:</label>
+                    <input type="date" id="recipeDate" name="dateShared" required>
+                </fieldset>
+
+            </fieldset>
+            <button type="submit">Share My Recipe</button>
+        </form>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span>

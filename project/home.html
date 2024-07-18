@@ -9,9 +9,8 @@
         content="WDD 131 - Dynamic Web Fundamentals by Diego Vargas. This assignment showcases the application of HTML, CSS, and JavaScript in designing and developing a responsive website. The website will highlight international street food through photos, recipes, localization, and cultural background. It will include three main pages featuring different street foods worldwide, their origins, and how to make them at home.">
     <title>Legendary Street Foods</title>
 
-    <script src="scripts/" defer></script>
-    <link rel="stylesheet" href="styles/">
-    <link rel="stylesheet" href="styles/">
+    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles/home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +21,45 @@
 <body>
     <header>
         <h1>Legendary Street Foods</h1>
+        <button id="menu"></button>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="spots.html">Food Spots</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
                 <li><a href="form.html">Share Recipe</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <div class="large-image">
+            <img src="path/to/your-image.jpg" alt="Large Image">
+        </div>
+        <div class="cta-container">
+            <a href="#" class="cta-button">Call to Action</a>
+        </div>
+        <div class="recipe-cards">
+            <div class="recipe-card">
+                <img src="path/to/recipe1.jpg" alt="Recipe 1">
+                <div class="recipe-info">
+                    <h3>Recipe Name 1</h3>
+                    <p>Short description of Recipe 1.</p>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="path/to/recipe2.jpg" alt="Recipe 2">
+                <div class="recipe-info">
+                    <h3>Recipe Name 2</h3>
+                    <p>Short description of Recipe 2.</p>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="path/to/recipe3.jpg" alt="Recipe 3">
+                <div class="recipe-info">
+                    <h3>Recipe Name 3</h3>
+                    <p>Short description of Recipe 3.</p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span>
