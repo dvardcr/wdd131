@@ -23,9 +23,8 @@
     box-sizing: border-box;
 }
 
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-primary);
     margin: 0;
     padding: 0;
     display: flex;
@@ -34,30 +33,132 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Header */
 header {
-    background-color: #ff5733;
-    color: white;
-    padding: 10px;
-    text-align: center;
+    background-color: var(--primary-color);
+    padding: 2rem 0 2rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    flex: 1;
+    text-align: left;
+    color: var(--background-header-color);
+}
+
+/* Navigation */
 header nav ul {
+    margin: 0;
+    padding: 0 20px;
     list-style-type: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex: 2;
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-right: 1rem;
+}
+
+header nav ul li:last-child {
+    margin-right: 1rem;
 }
 
 header nav ul li a {
-    color: white;
     text-decoration: none;
+    color: var(--background-header-color);
+    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: solid underline var(--secondary-color) 3px;
+}
+
+/* Hamburger Menu Icon */
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--text-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+#menu::before {
+    content: "☰";
+    color: var(--background-header-color);
+}
+
+#menu.open::before {
+    content: "X";
+    color: var(--background-header-color);
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 3rem 0 2rem 20px;
+    }
+
+    header h1 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    header nav ul li:hover {
+        text-decoration: solid underline var(--secondary-color) 2px;
+        color: var(--text-color);
+    }
+
+    header nav ul.open {
+        display: flex;
+    }
+
+    header nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .large-image img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* MAIN */
-
 main {
     flex: 1;
     display: flex;
@@ -133,6 +234,11 @@ main {
     border: 0;
 }
 
+.card-front {
+    padding: 20px;
+    background: white;
+}
+
 /* New CSS for popup effect */
 .card.flipped {
     position: fixed;
@@ -201,8 +307,7 @@ footer #lastModified {
     color: var(--secondary-color);
 }
 
-/* MEDIA */ 
-
+/* MEDIA */
 @media (max-width: 599px) {
     #food-spots-container {
         grid-template-columns: 1fr;

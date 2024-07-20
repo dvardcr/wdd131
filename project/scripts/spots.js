@@ -6,6 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
     lastModifiedElement.textContent = `Last Modification: ${document.lastModified}`;
     lastModifiedElement.classList.add('last-modified');
 
+    // Hamburger Menu functionality
+    const hamButton = document.querySelector('#menu');
+    const navigation = document.querySelector('header nav ul');
+
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked (for mobile)
+    document.querySelectorAll('header nav ul li a').forEach(item => {
+        item.addEventListener('click', () => {
+            navigation.classList.remove('open');
+            hamButton.classList.remove('open');
+        });
+    });
+
     const foodSpots = [
         {
             name: "El Chato Taco Truck",
@@ -93,12 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${spot.image}" loading="lazy" alt="${spot.name}">
                     <div class="card-content">
                         <h2>${spot.name}</h2>
+                        <h3>"Front"</h3>
                         <p>${spot.type}</p>
                         <p>${spot.country}</p>
                     </div>
                 </div>
                 <div class="card-back">
                     <iframe src="${spot.map}" loading="lazy"></iframe>
+                    <h3>"BACK"</h3>
                     <p>${spot.description}</p>
                 </div>
             </div>
