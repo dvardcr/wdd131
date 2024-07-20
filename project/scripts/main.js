@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Footer JS
     const yearElement = document.querySelector("#currentyear");
     const lastModifiedElement = document.querySelector("#lastModified");
 
@@ -23,14 +24,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Form Select 'Countries'
+    const countrySelect = document.getElementById('country');
+    const countries = ['USA', 'Mexico', 'Italy', 'France', 'Japan', 'India', 'Thailand', 'Brazil', 'Morocco', 'Greece'];
+
+    countries.forEach(country => {
+        const option = document.createElement('option');
+        option.value = country;
+        option.textContent = country;
+        countrySelect.appendChild(option);
+    });
+
+    // Submission counter
+    const form = document.querySelector('.wf1');
+    form.addEventListener('submit', () => {
+        let submissionCount = localStorage.getItem('submissionCount');
+
+        if (submissionCount === null) {
+            submissionCount = 0;
+        } else {
+            submissionCount = parseInt(submissionCount, 10);
+        }
+
+        submissionCount++;
+
+        localStorage.setItem('submissionCount', submissionCount);
+    });
+});
+
+
+// Food Spot Cards
+document.addEventListener('DOMContentLoaded', () => {
     const foodSpots = [
         {
-            name: "El Chato Taco Truck",
+            name: "El Gran Abanico",
             type: "Tacos",
             country: "Mexico",
-            image: "path/to/taco-image.jpg",
-            description: "Authentic Mexican street tacos with a variety of fillings.",
-            map: "https://www.google.com/maps/embed?pb=...mexico"
+            image: "images/taco.webp",
+            description: "Tacos and tortilla soup with a range of sides and salsas at a spacious, no-frills fast-food cantina.",
+            map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.735202114843!2d-99.130241!3d19.4149633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fec3ed4c314b%3A0x5c8f3bc85c987efb!2sTaqueria%20El%20Gran%20Abanico!5e0!3m2!1sen!2scr!4v1721506989081!5m2!1sen!2scr"
         },
         {
             name: "Jianbing",
@@ -110,14 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${spot.image}" loading="lazy" alt="${spot.name}">
                     <div class="card-content">
                         <h2>${spot.name}</h2>
-                        <h3>"Front"</h3>
-                        <p>${spot.type}</p>
-                        <p>${spot.country}</p>
+                        <p>${spot.type} - <span class="country">${spot.country}</span></p>
                     </div>
                 </div>
                 <div class="card-back">
+                    <h2>${spot.name}</h2>
                     <iframe src="${spot.map}" loading="lazy"></iframe>
-                    <h3>"BACK"</h3>
                     <p>${spot.description}</p>
                 </div>
             </div>
