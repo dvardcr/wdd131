@@ -9,9 +9,8 @@
         content="WDD 131 - Dynamic Web Fundamentals by Diego Vargas. This assignment showcases the application of HTML, CSS, and JavaScript in designing and developing a responsive website. The website will highlight international street food through photos, recipes, localization, and cultural background. It will include three main pages featuring different street foods worldwide, their origins, and how to make them at home.">
     <title>Legendary Street Foods</title>
 
-    <script src="scripts/" defer></script>
-    <link rel="stylesheet" href="styles/">
-    <link rel="stylesheet" href="styles/">
+    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles/home.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +21,7 @@
 <body>
     <header>
         <h1>Legendary Street Foods</h1>
+        <button id="menu" aria-label="Menu"></button>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -31,10 +31,18 @@
         </nav>
     </header>
     <main>
-        <div>
-            <p>Thank you for your recipe!</p>
-            <p>It will be reviewed and posted in a few weeks.</p>
-            <p>We will contact you if we are missing any ingredient!</p>
+        <div class="confirmation">
+            <div class="large-image">
+                <picture>
+                    <source media="(min-width: 601px)" srcset="images/ingredients70.webp">
+                    <img src="images/ingredients70.webp" alt="Large Image" loading="lazy">
+                </picture>
+                <div class="overlay">
+                    <h2>Thank you for your recipe!</h2>
+                    <p>It will be reviewed and posted in a few weeks.</p>
+                    <p>We will contact you if we are missing any ingredient!</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>

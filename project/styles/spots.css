@@ -1,3 +1,29 @@
+:root {
+    /* Global Color Variables */
+    --background-header-color: #FFFFFF;
+    --text-color: #000000;
+    --primary-color: #5B280E;
+    --secondary-color: #FFBB3D;
+
+    /* Font Families */
+    --font-primary: 'Roboto', sans-serif;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Font Styles */
+    --font-style-normal: normal;
+    --font-style-italic: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -30,6 +56,8 @@ header nav ul li a {
     text-decoration: none;
 }
 
+/* MAIN */
+
 main {
     flex: 1;
     display: flex;
@@ -47,7 +75,7 @@ main {
 .card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
     transform-style: preserve-3d;
@@ -78,7 +106,8 @@ main {
     transform-origin: center right;
 }
 
-.card-flip .card-front, .card-flip .card-back {
+.card-flip .card-front,
+.card-flip .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -153,6 +182,26 @@ main {
     margin-top: 10px;
     font-size: 16px;
 }
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer #currentyear {
+    font-weight: var(--font-weight-bold);
+}
+
+footer #lastModified {
+    padding-top: 0.1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* MEDIA */ 
 
 @media (max-width: 599px) {
     #food-spots-container {
