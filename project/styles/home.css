@@ -26,7 +26,6 @@
 /* General Body and Typography */
 body {
     font-family: var(--font-primary);
-    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
