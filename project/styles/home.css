@@ -230,7 +230,7 @@ main {
 
 .recipe-card img {
     width: 350px;
-    height: auto;
+    height: 200px;
     border-bottom: 1px solid #e0e0e0;
 }
 
