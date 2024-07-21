@@ -229,8 +229,8 @@ main {
 }
 
 .recipe-card img {
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 350px;
     border-bottom: 1px solid #e0e0e0;
 }
 
