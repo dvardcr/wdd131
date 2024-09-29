@@ -8,6 +8,7 @@ lastModifiedElement.style.color = "gold";
 lastModifiedElement.style.fontSize = "0.75em";
 
 
+
 /* Hamburguer Menu */
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
